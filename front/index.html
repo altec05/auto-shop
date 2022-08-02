@@ -160,8 +160,9 @@
     </div>
   </div>
 
-    <div class="container-fluid">
-      <div class="row-header">
+    <!-- <div class="container-fluid"> -->
+    <div class="wrapper">
+      <header class="header">
         <div class="container container-header">
           <div class="row align-items-center">
             <div class="col-3 align-self-center">
@@ -170,10 +171,10 @@
             <div class="col-9 align-self-center">
               <div class="row align-items-center">
                 <div class="col-6 align-self-center mb-2 text-start">
-                  <div>+7(999) 999 99-99 | email@mail.ru</div>
+                  <div><i class="fa-solid fa-phone fa-lg" style="color: #198754;"></i> +7(999) 999 99-99  <i class="fa-solid fa-envelope fa-lg" style="color: #198754;"></i> email@mail.ru</div>
                 </div>
               </div>
-
+  
               <div class="row align-items-center">
                 <div class="col-8 align-self-center">
                   <form class="d-flex me-auto" role="search">
@@ -202,46 +203,84 @@
                 
               </div>
               </div>
-
+  
               
             </div>
-          </div>
-      </div>
-      </div>
-
-      <div class="row-content">
-        <div class="col-sidebar">
-          <div class="row-category">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          </header>
+  
+      <main class="main">
+        <div class="row row-category align-items-center">
+          <div class="col col-category col-3" style="border-right:3px solid #eecf43; padding-left:10px;">
+            <div class="dropdown-center dropdown">
+              <button class="btn btn-secondary dropdown-toggle" style="height: 80px; font-size: 20px; min-width: 100%" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
                 Категории
               </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <ul class="dropdown-menu" style="width: 100%;" aria-labelledby="dropdownMenuButton1">
                 <li><a class="dropdown-item" href="#">Категория 1</a></li>
                 <li><a class="dropdown-item" href="#">Категория 2</a></li>
                 <li><a class="dropdown-item" href="#">Категория 3</a></li>
               </ul>
             </div>
           </div>
+          <div class="col col-path-sort col-9"  style="background-color: #f9f9f9">
+            <div class="row row-path">
+              <div class="col col-path col-12">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+            <div class="row row-sort align-items-center align-content-between" style="padding-bottom: 10px;" >
+              <div class="col col-sort col-6">
+                <select class="form-select" aria-label="Пример выбора по умолчанию">
+                  <option value="1">По популярности</option>
+                  <option value="2">По возрастанию цены</option>
+                  <option value="3">По убыванию цены</option>
+                  <option value="3">От А до Я</option>
+                  <option value="3">От Я до А</option>
+                </select>
+              </div>
+              <div class="col col-actual align-self-end">
+                <span>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" style="margin-top: -0.5px;" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">В наличии</label>
+                  </div>
+                </span>
+              </div>
+              <div class="col col-actual col-2">
+                <button type="button" class="btn btn-light">
+                  <i class="fa-solid fa-table-cells-large"></i> Плитка
+                </button>
+              </div>
+              <div class="col col-actual col-2">
+                <button type="button" class="btn btn-light">
+                  <i class="fa-solid fa-list"></i> Список
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sidebar">
           <div class="row-filter"></div>
         </div>
-        <div class="col-products">
-          <div class="row-path-sort">
-            <div class="col-path"></div>
-            <div class="col-sort"></div>
-          </div>
+        <div class="col col-products">
           <div class="row-product-card">
             <section class="main-content">
               <div class="container">
                 <div class="row">
                   <!-- левая часть с фильтрами и категориями -->
                   <div class="col-lg-3"></div>
-
+  
                   <!-- контентная часть -->
                   <div class="col-lg-3"></div>
                 </div>
-
-                <div class="row">
+  
+                <div class="row" style="line-height: 1.5;">
                   <div class="col-lg-3 col-sm-6 mb-3">
                     <div class="product-card">
                       <div class="product-thumb">
@@ -544,14 +583,15 @@
             </section>
           </div>
         </div>
-      </div>
-
-      <div class="row-footer">
+      </main>
+  
+      <footer class="footer">Я футер
         <div class="col-footer-logo"></div>
         <div class="col-footer-info"></div>
         <div class="col-footer-go-up"></div>
-      </div>
+      </footer>
     </div>
+    
 
     <!-- Вариант 1: пакет Bootstrap с Popper -->
     <script
