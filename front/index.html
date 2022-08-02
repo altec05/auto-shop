@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="main.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/5850cf8f81.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Авто-плюс</title>
+  </head>
+
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Авто-плюс</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Переключатель навигации"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="col-site-nav col-10">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  Главная
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  О компании
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown">
+                  <li><a class="dropdown-item" href="#">О нас</a></li>
+                  <li><a class="dropdown-item" href="#">Как купить</a></li>
+                  <li><a class="dropdown-item" href="#">Доставка</a></li>
+                  <li><a class="dropdown-item" href="#">Отзывы</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-user-nav col-2">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
+              <li class="nav-item">
+                <a
+                  class="nav-link active" data-bs-toggle="modal" data-bs-toggle="modal" data-bs-target="#modal-cart" aria-current="page" href="#"
+                >
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link active"
+                  data-bs-toggle="dropdown"
+                  aria-current="page"
+                  href="#"
+                  ><i class="fa-solid fa-user"></i
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Регистрация</a></li>
+                  <li><a class="dropdown-item" href="#">Войти</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Модальное окно -->
+  <div
+    class="modal fade"
+    id="modal-cart"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Ваши покупки
+          </h5>
+        </div>
+        <div class="modal-body">
+          <table class="table table-sm">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">Фото</th>
+                <th scope="col">Название</th>
+                <th scope="col">Цена</th>
+                <th scope="col">Количество</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <th scope="col">
+                <a href="#"
+                  ><img
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/1.webp"
+                /></a>
+              </th>
+              <th scope="col">Товар 1</th>
+              <th scope="col">90 000 Руб.</th>
+              <th scope="col">1</th>
+            </tbody>
+
+            <tfoot>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Итого:</th>
+                <th scope="col">90 000 Руб.</th>
+                <th scope="col">1</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-primary text-white"
+          >
+            Оформить заказ
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Продолжить покупки
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container-fluid">
+      <div class="row-header">
+        <div class="container container-header">
+          <div class="row align-items-center">
+            <div class="col-3 align-self-center">
+              <a href="#"><img src="img/header/header_logo.png" class="img-thumbnail img-fluid" alt=""></a>
+            </div>
+            <div class="col-9 align-self-center">
+              <div class="row align-items-center">
+                <div class="col-6 align-self-center mb-2 text-start">
+                  <div>+7(999) 999 99-99 | email@mail.ru</div>
+                </div>
+              </div>
+
+              <div class="row align-items-center">
+                <div class="col-7 align-self-center">
+                  <form class="d-flex me-auto" role="search">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Название"
+                      aria-label="Поиск"
+                    />
+                    <button class="btn btn-success" type="submit">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+      </div>
+      </div>
+
+      <div class="row-content">
+        <div class="col-sidebar">
+          <div class="row-category">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Категории
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Категория 1</a></li>
+                <li><a class="dropdown-item" href="#">Категория 2</a></li>
+                <li><a class="dropdown-item" href="#">Категория 3</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row-filter"></div>
+        </div>
+        <div class="col-products">
+          <div class="row-path-sort">
+            <div class="col-path"></div>
+            <div class="col-sort"></div>
+          </div>
+          <div class="row-product-card">
+            <section class="main-content">
+              <div class="container">
+                <div class="row">
+                  <!-- левая часть с фильтрами и категориями -->
+                  <div class="col-lg-3"></div>
+
+                  <!-- контентная часть -->
+                  <div class="col-lg-3"></div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-3 col-sm-6 mb-3">
+                    <div class="product-card">
+                      <div class="product-thumb">
+                        <a href="#"
+                          ><img
+                            src="img/items/podshipnik_26216.jpg"
+                            alt="Toвap"
+                        /></a>
+                      </div>
+                      <div class="product-details">
+                        <h3><a href="#">Подшипник </a></h3>
+                        <p>
+                          Короткое описаниеSome representative placeholder
+                          content for the second slide. Some representative
+                          placeholder content for the second slide.KopoTKoe
+                          описаниеSоmе representative placeholder content for
+                          the second slide. Some representative placeholder
+                          content for the second slide. Kopоткое описаниеSomе
+                          representative placeholder content for the second
+                          slide. Some representative placeholder content for the
+                          second slide.
+                        </p>
+                      </div>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price"><small>$100</small>$99</div>
+                        <div class="product-links">
+                          <a href=""><i class="fas fa-cart-plus"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 mb-3">
+                    <div class="product-card">
+                      <div class="product-thumb">
+                        <a href="#"
+                          ><img
+                            src="img/items/podshipnik_26216.jpg"
+                            alt="Toвap"
+                        /></a>
+                      </div>
+                      <div class="product-details">
+                        <h3><a href="#">Подшипник </a></h3>
+                        <p>
+                          Короткое описаниеSome representative placeholder
+                          content for the second slide. Some representative
+                          placeholder content for the second slide.KopoTKoe
+                          описаниеSоmе representative placeholder content for
+                          the second slide. Some representative placeholder
+                          content for the second slide. Kopоткое описаниеSomе
+                          representative placeholder content for the second
+                          slide. Some representative placeholder content for the
+                          second slide.
+                        </p>
+                      </div>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price"><small>$100</small>$99</div>
+                        <div class="product-links">
+                          <a href=""><i class="fas fa-cart-plus"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 mb-3">
+                    <div class="product-card">
+                      <div class="product-thumb">
+                        <a href="#"
+                          ><img
+                            src="img/items/podshipnik_26216.jpg"
+                            alt="Toвap"
+                        /></a>
+                      </div>
+                      <div class="product-details">
+                        <h3><a href="#">Подшипник </a></h3>
+                        <p>
+                          Короткое описаниеSome representative placeholder
+                          content for the second slide. Some representative
+                          placeholder content for the second slide.KopoTKoe
+                          описаниеSоmе representative placeholder content for
+                          the second slide. Some representative placeholder
+                          content for the second slide. Kopоткое описаниеSomе
+                          representative placeholder content for the second
+                          slide. Some representative placeholder content for the
+                          second slide.
+                        </p>
+                      </div>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price"><small>$100</small>$99</div>
+                        <div class="product-links">
+                          <a href=""><i class="fas fa-cart-plus"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 mb-3">
+                    <div class="product-card">
+                      <div class="product-thumb">
+                        <a href="#"
+                          ><img
+                            src="img/items/podshipnik_26216.jpg"
+                            alt="Toвap"
+                        /></a>
+                      </div>
+                      <div class="product-details">
+                        <h3><a href="#">Подшипник </a></h3>
+                        <p>
+                          Короткое описаниеSome representative placeholder
+                          content for the second slide. Some representative
+                          placeholder content for the second slide.KopoTKoe
+                          описаниеSоmе representative placeholder content for
+                          the second slide. Some representative placeholder
+                          content for the second slide. Kopоткое описаниеSomе
+                          representative placeholder content for the second
+                          slide. Some representative placeholder content for the
+                          second slide.
+                        </p>
+                      </div>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price"><small>$100</small>$99</div>
+                        <div class="product-links">
+                          <a href=""><i class="fas fa-cart-plus"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 mb-3">
+                    <div class="product-card">
+                      <div class="product-thumb">
+                        <a href="#"
+                          ><img
+                            src="img/items/podshipnik_26216.jpg"
+                            alt="Toвap"
+                        /></a>
+                      </div>
+                      <div class="product-details">
+                        <h3><a href="#">Подшипник </a></h3>
+                        <p>
+                          Короткое описаниеSome representative placeholder
+                          content for the second slide. Some representative
+                          placeholder content for the second slide.KopoTKoe
+                          описаниеSоmе representative placeholder content for
+                          the second slide. Some representative placeholder
+                          content for the second slide. Kopоткое описаниеSomе
+                          representative placeholder content for the second
+                          slide. Some representative placeholder content for the
+                          second slide.
+                        </p>
+                      </div>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price"><small>$100</small>$99</div>
+                        <div class="product-links">
+                          <a href=""><i class="fas fa-cart-plus"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 mb-3">
+                    <div class="product-card">
+                      <div class="product-thumb">
+                        <a href="#"
+                          ><img
+                            src="img/items/podshipnik_26216.jpg"
+                            alt="Toвap"
+                        /></a>
+                      </div>
+                      <div class="product-details">
+                        <h3><a href="#">Подшипник </a></h3>
+                        <p>
+                          Короткое описаниеSome representative placeholder
+                          content for the second slide. Some representative
+                          placeholder content for the second slide.KopoTKoe
+                          описаниеSоmе representative placeholder content for
+                          the second slide. Some representative placeholder
+                          content for the second slide. Kopоткое описаниеSomе
+                          representative placeholder content for the second
+                          slide. Some representative placeholder content for the
+                          second slide.
+                        </p>
+                      </div>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price"><small>$100</small>$99</div>
+                        <div class="product-links">
+                          <a href=""><i class="fas fa-cart-plus"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 mb-3">
+                    <div class="product-card">
+                      <div class="product-thumb">
+                        <a href="#"
+                          ><img
+                            src="img/items/podshipnik_26216.jpg"
+                            alt="Toвap"
+                        /></a>
+                      </div>
+                      <div class="product-details">
+                        <h3><a href="#">Подшипник </a></h3>
+                        <p>
+                          Короткое описаниеSome representative placeholder
+                          content for the second slide. Some representative
+                          placeholder content for the second slide.KopoTKoe
+                          описаниеSоmе representative placeholder content for
+                          the second slide. Some representative placeholder
+                          content for the second slide. Kopоткое описаниеSomе
+                          representative placeholder content for the second
+                          slide. Some representative placeholder content for the
+                          second slide.
+                        </p>
+                      </div>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price"><small>$100</small>$99</div>
+                        <div class="product-links">
+                          <a href=""><i class="fas fa-cart-plus"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 mb-3">
+                    <div class="product-card">
+                      <div class="product-thumb">
+                        <a href="#"
+                          ><img
+                            src="img/items/podshipnik_26216.jpg"
+                            alt="Toвap"
+                        /></a>
+                      </div>
+                      <div class="product-details">
+                        <h3><a href="#">Подшипник </a></h3>
+                        <p>
+                          Короткое описаниеSome representative placeholder
+                          content for the second slide. Some representative
+                          placeholder content for the second slide.KopoTKoe
+                          описаниеSоmе representative placeholder content for
+                          the second slide. Some representative placeholder
+                          content for the second slide. Kopоткое описаниеSomе
+                          representative placeholder content for the second
+                          slide. Some representative placeholder content for the
+                          second slide.
+                        </p>
+                      </div>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price"><small>$100</small>$99</div>
+                        <div class="product-links">
+                          <a href=""><i class="fas fa-cart-plus"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6 mb-3">
+                    <div class="product-card">
+                      <div class="product-thumb">
+                        <a href="#"
+                          ><img
+                            src="img/items/podshipnik_26216.jpg"
+                            alt="Toвap"
+                        /></a>
+                      </div>
+                      <div class="product-details">
+                        <h3><a href="#">Подшипник </a></h3>
+                        <p>
+                          Короткое описаниеSome representative placeholder
+                          content for the second slide. Some representative
+                          placeholder content for the second slide.KopoTKoe
+                          описаниеSоmе representative placeholder content for
+                          the second slide. Some representative placeholder
+                          content for the second slide. Kopоткое описаниеSomе
+                          representative placeholder content for the second
+                          slide. Some representative placeholder content for the
+                          second slide.
+                        </p>
+                      </div>
+                      <div
+                        class="product-bottom-details d-flex justify-content-between"
+                      >
+                        <div class="product-price"><small>$100</small>$99</div>
+                        <div class="product-links">
+                          <a href=""><i class="fas fa-cart-plus"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-footer">
+        <div class="col-footer-logo"></div>
+        <div class="col-footer-info"></div>
+        <div class="col-footer-go-up"></div>
+      </div>
+    </div>
+
+    <!-- Вариант 1: пакет Bootstrap с Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
